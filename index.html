@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Цитаты</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .quote-container {
+        text-align: center;
+        font-size: 24px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-container">
+      <p id="quote">Здесь будет цитата</p>
+      <div>
+        <button class="button" onclick="prevQuote()">Влево</button>
+        <button class="button" onclick="nextQuote()">Вправо</button>
+      </div>
+    </div>
+
+    <script>
+      const quotes = [
+        "Не бойтесь делать ошибки. Это путь к успеху.",
+        "Успех — это не конечная точка, а путешествие.",
+        "Секрет успеха в том, чтобы начать.",
+        "Единственный способ сделать отличную работу — это любить то, что вы делаете.",
+        "Ваше время ограничено, не тратьте его, живя чужой жизнью.",
+      ];
+
+      let currentQuoteIndex = 0;
+
+      function displayQuote() {
+        const quoteElement = document.getElementById("quote");
+        quoteElement.textContent = quotes[currentQuoteIndex];
+      }
+
+      function prevQuote() {
+        currentQuoteIndex =
+          (currentQuoteIndex - 1 + quotes.length) % quotes.length;
+        displayQuote();
+      }
+
+      function nextQuote() {
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        displayQuote();
+      }
+
+      // Отображаем первую цитату при загрузке страницы
+      displayQuote();
+    </script>
+  </body>
+</html>
