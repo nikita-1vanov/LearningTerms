@@ -6,44 +6,33 @@
     <title>Цитаты</title>
     <link rel="stylesheet" type="text/css" href="./style/main.css" />
   </head>
+
   <body>
-    <div class="quote-container">
-      <p id="quote">Здесь будет цитата</p>
-      <div>
-        <button class="button" onclick="prevQuote()">Влево</button>
-        <button class="button" onclick="nextQuote()">Вправо</button>
+    <header>
+      <div class="header__logo-text">Learning Terms</div>
+    </header>
+
+    <main>
+      <div class="quote-container">
+        <p id="quote">Здесь будет цитата</p>
+        <div>
+          <button class="button" onclick="prevQuote()">Влево</button>
+          <button class="button" onclick="nextQuote()">Вправо</button>
+        </div>
       </div>
-    </div>
-
-    <script>
-      const quotes = [
-        "Не бойтесь делать ошибки. Это путь к успеху.",
-        "Успех — это не конечная точка, а путешествие.",
-        "Секрет успеха в том, чтобы начать.",
-        "Единственный способ сделать отличную работу — это любить то, что вы делаете.",
-        "Ваше время ограничено, не тратьте его, живя чужой жизнью.",
-      ];
-
-      let currentQuoteIndex = 0;
-
-      function displayQuote() {
-        const quoteElement = document.getElementById("quote");
-        quoteElement.textContent = quotes[currentQuoteIndex];
-      }
-
-      function prevQuote() {
-        currentQuoteIndex =
-          (currentQuoteIndex - 1 + quotes.length) % quotes.length;
-        displayQuote();
-      }
-
-      function nextQuote() {
-        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-        displayQuote();
-      }
-
-      // Отображаем первую цитату при загрузке страницы
-      displayQuote();
-    </script>
+    </main>
+    <footer style="display: flex; justify-content: right">
+      <div class="footer__github-block">
+        <img class="footer__git-img" src="./img/github.png" />
+        <a
+          class="footer__github-link"
+          href="https://github.com/nikita-1vanov/LearningTerms"
+        >
+          0.0.1
+        </a>
+      </div>
+    </footer>
   </body>
+
+  <script src="./script/main.js" type="module"></script>
 </html>
