@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Doloman Pavljenko";
+  src: url(../fonts/DolomanPavljenko.otf);
+}
+
 a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -6,12 +11,11 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #202940;
-  font-family: "Arial", sans-serif;
-  color: white;
+  background-color: #d2d4da;
+  font-family: "Doloman Pavljenko", sans-serif;
+  color: black;
   margin: 0px 5%;
   min-height: 100%;
-  min-width: 600px;
   cursor: default;
   touch-action: manipulation;
 }
@@ -24,16 +28,20 @@ body {
   padding: 20px;
 }
 
-button {
-  color: white;
-  background-color: #202940;
-  border: none;
-  cursor: pointer;
+.quote-container p {
+  width: 700px;
+  margin: 0 100px;
   -webkit-tap-highlight-color: transparent;
-  font-size: 100px;
-  padding: 15px;
-  border-radius: 5%;
-  margin: 0 30px;
+}
+
+#right_button,
+#left_button {
+  cursor: pointer;
+}
+
+#right_button:hover,
+#left_button:hover {
+  opacity: 0.5;
 }
 
 header {
@@ -62,7 +70,7 @@ footer {
 }
 
 .footer__github-link {
-  color: white;
+  color: black;
   cursor: pointer;
   text-align: right;
 }
