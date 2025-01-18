@@ -1,27 +1,31 @@
 "use strict";
 
-import { quotes } from './quote.js'
-
-console.log(quotes)
+import { definition } from "./definition.js";
 
 let currentQuoteIndex = 0;
 
-function displayQuote() {
-  const quoteElement = document.getElementById("quote");
-  quoteElement.textContent = quotes[currentQuoteIndex];
+function displayDefinition() {
+  const descriptionDefinitionElement = document.querySelector(
+    ".definition_description"
+  );
+  const nameDefinitionElement = document.querySelector(".definition_name");
+  descriptionDefinitionElement.textContent =
+    definition[currentQuoteIndex]["description"];
+  nameDefinitionElement.textContent = definition[currentQuoteIndex]["name"];
 }
 
-function prevQuote() {
-  currentQuoteIndex = (currentQuoteIndex - 1 + quotes.length) % quotes.length;
-  displayQuote();
+function prevDefinition() {
+  currentQuoteIndex =
+    (currentQuoteIndex - 1 + definition.length) % definition.length;
+  displayDefinition();
 }
 
-function nextQuote() {
-  currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-  displayQuote();
+function nextDefinition() {
+  currentQuoteIndex = (currentQuoteIndex + 1) % definition.length;
+  displayDefinition();
 }
 
-displayQuote();
+displayDefinition();
 
-window.nextQuote = nextQuote;
-window.prevQuote = prevQuote;
+window.nextDefinition = nextDefinition;
+window.prevDefinition = prevDefinition;

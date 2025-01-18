@@ -20,20 +20,6 @@ body {
   touch-action: manipulation;
 }
 
-.quote-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 36px;
-  padding: 20px;
-}
-
-.quote-container p {
-  width: 700px;
-  margin: 0 100px;
-  -webkit-tap-highlight-color: transparent;
-}
-
 #right_button,
 #left_button {
   cursor: pointer;
@@ -60,11 +46,37 @@ main {
   flex: 1;
   align-items: center;
   justify-content: center;
+  font-size: 36px;
+}
+
+.definition__block {
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  padding: 20px;
+  text-align: center;
+  width: 800px;
+}
+
+.definition_name,
+.definition_description {
+  margin: 0px;
+}
+
+.definition_name {
+  font-size: 86px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.definition_description {
+  font-style: italic;
 }
 
 footer {
   display: flex;
   justify-content: right;
+  align-items: center;
   margin: 10px 0 30px 0;
   font-size: 20px;
 }
