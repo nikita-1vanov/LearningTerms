@@ -12,22 +12,22 @@
     </header>
 
     <main>
-      <div class="quote-container">
-        <img id="left_button" onclick="prevQuote()" src="img/left.png" />
-        <p id="quote">Здесь будет цитата</p>
-        <img id="right_button" onclick="nextQuote()" src="img/right.png" />
+      <img id="left_button" onclick="prevDefinition()" src="img/left.png" />
+      <div class="definition__block">
+        <p class="definition_name">Term</p>
+        <p class="definition_description">Definition</p>
       </div>
+      <img id="right_button" onclick="nextDefinition()" src="img/right.png" />
     </main>
-    <footer style="display: flex; justify-content: right">
-      <div class="footer__github-block">
-        <img class="footer__git-img" src="./img/git.png" />
-        <a
-          class="footer__github-link"
-          href="https://github.com/nikita-1vanov/LearningTerms"
-        >
-          0.0.1
-        </a>
-      </div>
+
+    <footer>
+      <img class="footer__git-img" src="./img/git.png" />
+      <a
+        class="footer__github-link"
+        href="https://github.com/nikita-1vanov/LearningTerms"
+      >
+        0.0.1
+      </a>
     </footer>
   </body>
 
