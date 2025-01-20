@@ -1,6 +1,16 @@
 "use strict";
 
-import { definition } from "./definition.js";
+import { baseDefinition } from "./definition.js";
+
+const currentDefinition = localStorage.getItem("definition");
+
+if (!currentDefinition) {
+  localStorage.setItem("definition", JSON.stringify(baseDefinition));
+}
+
+const definition = currentDefinition
+  ? JSON.parse(currentDefinition)
+  : baseDefinition;
 
 let currentQuoteIndex = 0;
 
@@ -8,6 +18,7 @@ function displayDefinition() {
   const descriptionDefinitionElement = document.querySelector(
     ".definition_description"
   );
+
   const nameDefinitionElement = document.querySelector(".definition_name");
   descriptionDefinitionElement.textContent =
     definition[currentQuoteIndex]["description"];
