@@ -1,6 +1,6 @@
 "use strict";
 
-export const definition = [
+export const baseDefinition = [
   {
     name: "bug",
     description: `Не бойтесь делать ошибки. Это путь к успеху.
