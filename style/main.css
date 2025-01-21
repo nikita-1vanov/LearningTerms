@@ -20,11 +20,18 @@ body {
   touch-action: manipulation;
 }
 
+.content {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#addDefinition,
 #right_button,
 #left_button {
   cursor: pointer;
 }
 
+#addDefinition:hover,
 #right_button:hover,
 #left_button:hover {
   opacity: 0.5;
@@ -44,6 +51,7 @@ header {
 main {
   display: flex;
   flex: 1;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 36px;
@@ -95,4 +103,48 @@ footer {
 .footer__best-result-img {
   height: 25px;
   padding: 0 10px 0 10px;
+}
+
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.modal__content p {
+  margin: 10px 0 10px 0;
+}
+
+.modal__button-container {
+  display: flex;
+}
+
+.modal__button-container button {
+  color: white;
+  background-color: #9922fb;
+  border-radius: 5%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#name_fill,
+#description_fill {
+  margin-right: 20px;
+}
+
+.modal__input {
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 5px;
+  margin-right: 20px
+}
+
+.modal__error-message {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
 }
