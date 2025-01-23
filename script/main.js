@@ -16,10 +16,10 @@ let currentQuoteIndex = 0;
 
 function displayDefinition() {
   const descriptionDefinitionElement = document.querySelector(
-    ".definition_description"
+    ".content__term-description"
   );
 
-  const nameDefinitionElement = document.querySelector(".definition_name");
+  const nameDefinitionElement = document.querySelector(".content__term-name");
   descriptionDefinitionElement.textContent =
     definition[currentQuoteIndex]["description"];
   nameDefinitionElement.textContent = definition[currentQuoteIndex]["name"];

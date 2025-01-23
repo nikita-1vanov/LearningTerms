@@ -8,6 +8,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+p {
+  margin: 0px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,32 +24,32 @@ body {
   touch-action: manipulation;
 }
 
-.content {
-  display: flex;
-  margin-bottom: 40px;
-}
-
-#addDefinition,
-#right_button,
-#left_button {
-  cursor: pointer;
-}
-
-#addDefinition:hover,
-#right_button:hover,
-#left_button:hover {
-  opacity: 0.5;
-}
-
 header {
   display: flex;
   padding: 30px 0;
 }
 
-.header__logo-text {
+.header__text {
   font-size: 40px;
   font-weight: 500;
   padding-left: 5px;
+}
+
+.content__block {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#add_terms_button=,
+.footer__github-link,
+.content__block img {
+  cursor: pointer;
+}
+
+#add_terms_button:hover,
+.footer__github-link:hover,
+.content__block img:hover {
+  opacity: 0.5;
 }
 
 main {
@@ -57,27 +61,21 @@ main {
   font-size: 36px;
 }
 
-.definition__block {
+.content__term-block {
   display: flex;
   flex-direction: column;
-  font-size: 36px;
   padding: 20px;
   text-align: center;
   width: 800px;
 }
 
-.definition_name,
-.definition_description {
-  margin: 0px;
-}
-
-.definition_name {
+.content__term-name {
   font-size: 86px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.definition_description {
+.content__term-description {
   font-style: italic;
 }
 
@@ -89,45 +87,34 @@ footer {
   font-size: 20px;
 }
 
-.footer__github-link {
-  color: black;
-  cursor: pointer;
-  text-align: right;
-}
-
-.footer__github-link:hover {
-  color: #9922fb;
-}
-
-.footer__git-img,
-.footer__best-result-img {
+.footer__git-img {
   height: 25px;
   padding: 0 10px 0 10px;
 }
 
 
-.modal__content {
+.modal__block {
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 20px;
   margin-top: 40px;
-  padding: 30px 100px;
+  padding: 30px 50px;
 }
 
-.modal__content p {
+.modal__block p {
   margin: 10px 0 10px 0;
 }
 
-.modal__button-container button {
+.modal__block button {
   background-color: #d2d4da;
   border-radius: 5%;
-  padding: 10px 30px;
+  padding: 10px 50px;
   font-size: 18px;
 }
 
-#name_fill,
-#description_fill {
+#title__input,
+#description__input {
   margin-right: 20px;
 }
 
@@ -142,5 +129,4 @@ footer {
 .modal__error-message {
   font-size: 14px;
   color: red;
-  margin-top: 10px;
 }
