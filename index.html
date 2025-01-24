@@ -2,39 +2,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Цитаты</title>
+    <title>IT Terms</title>
     <link rel="stylesheet" type="text/css" href="./style/main.css" />
   </head>
 
   <body>
     <header>
-      <div class="header__logo-text">Study IT term</div>
+      <div class="header__text">Study IT terms</div>
     </header>
 
     <main>
-      <div class="content">
-        <img id="left_button" onclick="prevDefinition()" src="img/left.png" />
-        <div class="definition__block">
-          <p class="definition_name">Term</p>
-          <p class="definition_description">Definition</p>
+      <div class="content__block">
+        <img onclick="prevDefinition()" src="img/left.png" />
+        <div class="content__term-block">
+          <p class="content__term-name">Term</p>
+          <p class="content__term-description">Definition</p>
         </div>
-        <img id="right_button" onclick="nextDefinition()" src="img/right.png" />
+        <img onclick="nextDefinition()" src="img/right.png" />
       </div>
-      <img src="/img/add.png" id="addDefinition" />
-      <div class="modal__content">
-        <div id="name_fill">
+
+      <img src="/img/add.png" id="add_terms_button" />
+
+      <div class="modal__block">
+        <div id="title__input">
           <p>Name:</p>
           <input class="modal__input" placeholder="Fill Name" />
-          <p class="modal__error-message">Max size 999 simbols</p>
+          <p class="modal__error-message">.</p>
         </div>
-        <div id="description_fill">
-        <p>Description:</p>
-        <input class="modal__input" placeholder="Fill surename" />
-        <p class="modal__error-message">Max size 999 simbols</p>
-      </div>
-        <div class="modal__button-container">
-          <button onclick="">Add</button>
+
+        <div id="description__input">
+          <p>Description:</p>
+          <input class="modal__input" placeholder="Fill surename" />
+          <p class="modal__error-message">.</p>
         </div>
+
+        <button onclick="addNewTerms()">Add</button>
       </div>
     </main>
 
@@ -47,7 +49,6 @@
         0.0.2
       </a>
     </footer>
-
   </body>
 
   <script src="./script/main.js" type="module"></script>
