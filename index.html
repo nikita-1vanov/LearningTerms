@@ -21,18 +21,23 @@
         <img onclick="nextTerm()" src="img/right.png" />
       </div>
 
-      <img src="/img/add.png" id="add_terms_button" />
+      <div class="mobile-nabigation__block">
+        <img onclick="prevTerm()" src="img/mob-left.png" />
+        <img onclick="nextTerm()" src="img/mob-right.png" />
+      </div>
+
+      <img src="img/add.png" id="add_terms_button" />
 
       <div class="modal__block">
         <div id="title__input">
-          <p>Name:</p>
-          <input class="modal__input" placeholder="Fill Name" />
+          <p>Title:</p>
+          <input class="modal__input" />
           <p class="modal__error-message">.</p>
         </div>
 
         <div id="description__input">
           <p>Description:</p>
-          <input class="modal__input" placeholder="Fill surename" />
+          <input class="modal__input" />
           <p class="modal__error-message">.</p>
         </div>
 
@@ -46,7 +51,7 @@
         class="footer__github-link"
         href="https://github.com/nikita-1vanov/LearningTerms"
       >
-        0.0.3
+        1.0.0
       </a>
     </footer>
   </body>
