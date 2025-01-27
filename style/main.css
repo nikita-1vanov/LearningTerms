@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Doloman Pavljenko";
-  src: url(../fonts/DolomanPavljenko.otf);
+  font-family: "BlackerSans";
+  src: url(../fonts/BlackerSansProVariableGX.ttf);
 }
 
 a {
@@ -16,12 +16,13 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #d2d4da;
-  font-family: "Doloman Pavljenko", sans-serif;
+  font-family: "BlackerSans", sans-serif;
   color: black;
   margin: 0px 5%;
   min-height: 100%;
   cursor: default;
   touch-action: manipulation;
+  font-weight: 100;
 }
 
 header {
@@ -31,7 +32,6 @@ header {
 
 .header__text {
   font-size: 40px;
-  font-weight: 500;
   padding-left: 5px;
 }
 
@@ -71,7 +71,6 @@ main {
 
 .content__term-name {
   font-size: 86px;
-  font-weight: bold;
   margin-bottom: 30px;
 }
 
